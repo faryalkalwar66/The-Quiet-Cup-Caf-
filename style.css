@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3efe9;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 60px;
+    gap: 230px;
+    margin-top: 20px;
+}
+
+
+.logo {
+    width: 170px;
+    height: auto;
+    margin-left: 170px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b2e2a;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.nav-links a:hover {
+    color: #8b5e3c;
+}
+
+
+.section {
+    color: #4b2e2a;
+}
+
+.text-section {
+    margin-left: 130px;
+    margin-bottom: 40px;
+}
+
+.text-section p{
+    margin-top: 20px;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    
+
+}
+
+.home {
+    margin-left: 150px;
+    width: 450px;
+    height: auto;
+}
+.buttons {
+    margin-top: 25px;   
+}
+
+
+.opening-hours-home {
+    color: #4b2e2a;
+}
+
+.opening-hours-home h4 {
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+.opening-hours-home p {
+    font-size: 15px;
+     line-height: 1;    
+    margin: 0;
+ 
+}
+
+
+
+
+.contact-button {
+    padding: 10px 26px;
+    color: #fff;
+    background-color: #4b2e2a;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background-color: #8b5e3c;
+    border-color: white;
+}
+
+
+.about-section {
+    padding: 120px 0;
+    background-color: white;
+}
+
+.about-section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 130px;
+    margin-top: 70px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 30px 0 70px;
+    color: #4b2e2a;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 20px;
+    background-color: #4b2e2a;
+}
+
+.text {
+    color: #4b2e2a;
+    text-align: center;
+}
+
+.about-details {
+    margin-right: 40px;
+}
+
+
+.menu-header {
+    width: 100%;
+    height: 150px;
+    background-image: url('beans2.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.menu-title {
+    font-size: 48px;
+    color: #f1dcc1;
+    font-family: Georgia, serif;
+    letter-spacing: 2px;
+}
+
+.menu-items-section {
+    padding: 60px 10%;
+    background-color: #f3efe9;
+}
+
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    color: #4b2e2a;
+}
+
+.menu-item p {
+    color: #8b5e3c;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+
+.reviews-section {
+    padding: 80px 10%;
+    background-color: #fff8f0;
+    color: #4b2e2a;
+}
+
+.reviews-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-card {
+    background-color: #f3efe9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review-stars {
+    color: #f2b01e;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #8b5e3c;
+}
+
+
+.contact-section {
+    padding: 80px 10%;
+    background-color: #f3efe9;
+    color: #4b2e2a;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #8b5e3c;
+    color: white;
+    border-radius: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #4b2e2a;
+}
+
+.opening-hours {
+    margin-top: 20px;
+}
