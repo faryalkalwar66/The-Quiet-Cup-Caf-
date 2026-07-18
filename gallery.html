@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quiet Cup Cafééé | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Preloader & Magic Cursor -->
+    <div id="preloader" class="preloader"><div class="loader"></div></div>
+    <div id="custom-cursor" class="cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+
+    <header class="header">
+        <a href="index.html" class="logo-link"><img src="assets/final-logo.jpg" alt="The Quiet Cup Caféé Logo" class="logo"></a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown"><a href="menu.html">Menu ▾</a><ul class="dropdown-menu"><li><a href="menu.html#hot-classics">Hot Classics</a></li><li><a href="menu.html#signatures">Signatures</a></li><li><a href="menu.html#cold-brews">Cold Brews & Frappes</a></li><li><a href="menu.html#teas">Teas & Infusions</a></li><li><a href="menu.html#bakery">Bakery & Pastries</a></li><li><a href="menu.html#desserts">Desserts</a></li><li><a href="assets/CoffeeShop-Menu.pdf" download>📥 Download Menu</a></li></ul></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>\n                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+            <button class="cart-toggle" id="cartToggle" aria-label="Open cart" title="View cart">
+                🛒<span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty" id="cartEmpty">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    
+    <main>
+        <section class="menu-header">
+            <div class="menu-title-wrapper" data-aos="fade-up">
+                <h1 class="menu-title">Our Vibe</h1>
+                <p style="text-align:center; color: var(--text-light); margin-top: 10px;">A visual journey through The Quiet Cup Cafe.</p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-masonry">
+                <div class="gallery-item large" data-aos="fade-up">
+                    <img src="assets/quiet-cup-cafe-interior.jpg" alt="Cafe Interior">
+                    <div class="gallery-overlay"><span>The Atmosphere</span></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/reservation-table.jpg" alt="Reservation Table">
+                    <div class="gallery-overlay"><span>Cozy Corners</span></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/espresso-quiet-cup-cafe.jpg" alt="Espresso Shot">
+                    <div class="gallery-overlay"><span>The Perfect Pull</span></div>
+                </div>
+                <div class="gallery-item wide" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/pastry-placeholder.jpg" alt="Pastries">
+                    <div class="gallery-overlay"><span>Fresh Bakery</span></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/mocha-quiet-cup-cafe.jpg" alt="Mocha Art">
+                    <div class="gallery-overlay"><span>Latte Art</span></div>
+                </div>
+                <div class="gallery-item large" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/dessert-placeholder.jpg" alt="Desserts">
+                    <div class="gallery-overlay"><span>Sweet Decadence</span></div>
+                </div>
+                <div class="gallery-item wide" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/turkish-coffee-quiet-cup-cafe.jpg" alt="Turkish Coffee">
+                    <div class="gallery-overlay"><span>Signature Brews</span></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+                    <img src="assets/tea-placeholder.jpg" alt="Artisan Teas">
+                    <div class="gallery-overlay"><span>Infusions</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="site-footer">
+        
+        <div class="footer-club" data-aos="fade-up">
+            <h3>The Quiet Club</h3>
+            <p>Join our exclusive newsletter for hidden menus, early access, and free coffee perks.</p>
+            <form class="club-form" onsubmit="event.preventDefault(); alert('Welcome to The Quiet Club!');">
+                <input type="email" placeholder="Enter your email..." required>
+                <button type="submit">Join</button>
+            </form>
+        </div>
+
+        <div class="footer-about">
+            <h4>The Quiet Cup Cafééé</h4>
+            <p>A calm corner for slow moments and good coffee.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown"><a href="menu.html">Menu ▾</a><ul class="dropdown-menu"><li><a href="menu.html#hot-classics">Hot Classics</a></li><li><a href="menu.html#signatures">Signatures</a></li><li><a href="menu.html#cold-brews">Cold Brews & Frappes</a></li><li><a href="menu.html#teas">Teas & Infusions</a></li><li><a href="menu.html#bakery">Bakery & Pastries</a></li><li><a href="menu.html#desserts">Desserts</a></li><li><a href="assets/CoffeeShop-Menu.pdf" download>📥 Download Menu</a></li></ul></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>\n                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 8:00 AM – 8:00 PM</p>
+            <p>Saturday: 9:00 AM – 5:00 PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 The Quiet Cup Cafééé. All rights reserved.</p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

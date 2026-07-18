@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quiet Cup Cafééé | About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Preloader & Magic Cursor -->
+    <div id="preloader" class="preloader"><div class="loader"></div></div>
+    <div id="custom-cursor" class="cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+
+    <header class="header">
+        <a href="index.html" class="logo-link"><img src="assets/final-logo.jpg" alt="The Quiet Cup Caféé Logo" class="logo"></a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li class="dropdown"><a href="menu.html">Menu ▾</a><ul class="dropdown-menu"><li><a href="menu.html#hot-classics">Hot Classics</a></li><li><a href="menu.html#signatures">Signatures</a></li><li><a href="menu.html#cold-brews">Cold Brews & Frappes</a></li><li><a href="menu.html#teas">Teas & Infusions</a></li><li><a href="menu.html#bakery">Bakery & Pastries</a></li><li><a href="menu.html#desserts">Desserts</a></li><li><a href="assets/CoffeeShop-Menu.pdf" download>📥 Download Menu</a></li></ul></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+            <button class="cart-toggle" id="cartToggle" aria-label="Open cart" title="View cart">
+                🛒<span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty" id="cartEmpty">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <main>
+
+        <!-- Advanced About Section -->
+        <section class="about-split">
+            <div class="about-split-img"></div>
+            <div class="about-split-content">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Our Story</h2>
+                <p>
+                    Established in the heart of the city, <em>The Quiet Cup Cafééé</em> was born out of a simple desire: to create a sanctuary where people can escape the noise of everyday life. Our founders traveled the world, tasting the finest beans and observing café cultures from Istanbul to Seattle, before bringing the best of those experiences home.
+                </p>
+                
+                <h2 class="section-title" style="text-align: left; margin-top: 40px; margin-bottom: 20px;">Our Mission</h2>
+                <p>
+                    We believe coffee is more than a drink — it’s a moment of peace. From carefully sourced, ethical beans to thoughtfully brewed cups, every detail is chosen to create a warm and welcoming experience. Our space is designed for comfort, conversation, and creativity.
+                </p>
+
+                <h2 class="section-title" style="text-align: left; margin-top: 40px; margin-bottom: 20px;">Our Process</h2>
+                <p>
+                    Every cup starts with our Master Roasters, who craft small-batch profiles to highlight the unique terroir of our single-origin beans. Whether it's our rich Espresso, our 24-hour Cold Brew, or our signature Turkish Coffee, we don't rush perfection. 
+                </p>
+
+                <div class="buttons" style="margin-top: 30px;">
+                    <a href="menu.html" class="contact-button">Explore Our Menu</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        
+        <div class="footer-club" data-aos="fade-up">
+            <h3>The Quiet Club</h3>
+            <p>Join our exclusive newsletter for hidden menus, early access, and free coffee perks.</p>
+            <form class="club-form" onsubmit="event.preventDefault(); alert('Welcome to The Quiet Club!');">
+                <input type="email" placeholder="Enter your email..." required>
+                <button type="submit">Join</button>
+            </form>
+        </div>
+
+        <div class="footer-about">
+            <h4>The Quiet Cup Cafééé</h4>
+            <p>A calm corner for slow moments and good coffee.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown"><a href="menu.html">Menu ▾</a><ul class="dropdown-menu"><li><a href="menu.html#hot-classics">Hot Classics</a></li><li><a href="menu.html#signatures">Signatures</a></li><li><a href="menu.html#cold-brews">Cold Brews & Frappes</a></li><li><a href="menu.html#teas">Teas & Infusions</a></li><li><a href="menu.html#bakery">Bakery & Pastries</a></li><li><a href="menu.html#desserts">Desserts</a></li><li><a href="assets/CoffeeShop-Menu.pdf" download>📥 Download Menu</a></li></ul></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 8:00 AM – 8:00 PM</p>
+            <p>Saturday: 9:00 AM – 5:00 PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 The Quiet Cup Cafééé. All rights reserved.</p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

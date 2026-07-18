@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quiet Cup Cafééé | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Preloader & Magic Cursor -->
+    <div id="preloader" class="preloader"><div class="loader"></div></div>
+    <div id="custom-cursor" class="cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+
+    <header class="header">
+        <a href="index.html" class="logo-link"><img src="assets/final-logo.jpg" alt="The Quiet Cup Caféé Logo" class="logo"></a>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown"><a href="menu.html">Menu ▾</a><ul class="dropdown-menu"><li><a href="menu.html#hot-classics">Hot Classics</a></li><li><a href="menu.html#signatures">Signatures</a></li><li><a href="menu.html#cold-brews">Cold Brews & Frappes</a></li><li><a href="menu.html#teas">Teas & Infusions</a></li><li><a href="menu.html#bakery">Bakery & Pastries</a></li><li><a href="menu.html#desserts">Desserts</a></li><li><a href="assets/CoffeeShop-Menu.pdf" download>📥 Download Menu</a></li></ul></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+            <button class="cart-toggle" id="cartToggle" aria-label="Open cart" title="View cart">
+                🛒<span class="cart-count" id="cartCount">0</span>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Your Order</h3>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="cart-empty" id="cartEmpty">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <main>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+
+            <div class="contact-container">
+
+                <div class="map-container" data-aos="fade-up">
+                    <!-- Embedded Google Map pointing to Sukkur, Pakistan -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113426.47169145624!2d68.79010072048924!3d27.726830578877543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3935d45d8299298b%3A0xc3161df2775aab34!2sSukkur%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <form class="contact-form" data-aos="fade-up">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-color);">Send a Message</h3>
+                    <div class="form-group-floating">
+                        <input type="text" id="contactName" required>
+                        <label for="contactName">Your Name</label>
+                    </div>
+                    <div class="form-group-floating">
+                        <input type="email" id="contactEmail" required>
+                        <label for="contactEmail">Your Email</label>
+                    </div>
+                    <div class="form-group-floating">
+                        <textarea id="contactMessage" rows="4" required></textarea>
+                        <label for="contactMessage">Your Message</label>
+                    </div>
+                    <button type="submit" style="margin-top: 10px;">Send Message</button>
+                    <p class="form-status"></p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        
+        <div class="footer-club" data-aos="fade-up">
+            <h3>The Quiet Club</h3>
+            <p>Join our exclusive newsletter for hidden menus, early access, and free coffee perks.</p>
+            <form class="club-form" onsubmit="event.preventDefault(); alert('Welcome to The Quiet Club!');">
+                <input type="email" placeholder="Enter your email..." required>
+                <button type="submit">Join</button>
+            </form>
+        </div>
+
+        <div class="footer-about">
+            <h4>The Quiet Cup Cafééé</h4>
+            <p>A calm corner for slow moments and good coffee.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown"><a href="menu.html">Menu ▾</a><ul class="dropdown-menu"><li><a href="menu.html#hot-classics">Hot Classics</a></li><li><a href="menu.html#signatures">Signatures</a></li><li><a href="menu.html#cold-brews">Cold Brews & Frappes</a></li><li><a href="menu.html#teas">Teas & Infusions</a></li><li><a href="menu.html#bakery">Bakery & Pastries</a></li><li><a href="menu.html#desserts">Desserts</a></li><li><a href="assets/CoffeeShop-Menu.pdf" download>📥 Download Menu</a></li></ul></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-hours">
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 8:00 AM – 8:00 PM</p>
+            <p>Saturday: 9:00 AM – 5:00 PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2026 The Quiet Cup Cafééé. All rights reserved.</p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
