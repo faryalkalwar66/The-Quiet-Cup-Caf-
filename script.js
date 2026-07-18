@@ -377,7 +377,7 @@ window.addEventListener('load', () => {
 // ==========================================
 // BACKEND INTEGRATION (Node.js + MongoDB)
 // ==========================================
-const API_URL = 'http://localhost:3000/api';
+const API_URL = '/api';
 
 // 1. The Quiet Club (Footer Newsletter)
 document.querySelectorAll('.club-form').forEach(form => {
