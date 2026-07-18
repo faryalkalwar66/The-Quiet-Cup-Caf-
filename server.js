@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 // MongoDB Connection (Local or Cloud)
-const MONGODB_URI = 'mongodb+srv://faryalkalwar66_db_user:2dgNsQli7wfZcIfI@cluster0.fv6bjby.mongodb.net/quietcup?retryWrites=true&w=majority&appName=Cluster0';
+const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('✅ Connected to MongoDB (' + (process.env.MONGODB_URI ? 'Cloud Atlas' : 'Local') + ')'))
 .catch(err => console.error('❌ MongoDB Connection Error:', err));
