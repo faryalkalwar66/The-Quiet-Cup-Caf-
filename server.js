@@ -106,6 +106,14 @@ app.post('/api/orders', async (req, res) => {
     }
 });
 
+app.get('/api/debug', (req, res) => {
+    res.json({
+        hasMongoUri: !!process.env.MONGODB_URI,
+        uriLength: process.env.MONGODB_URI ? process.env.MONGODB_URI.length : 0,
+        startsWith: process.env.MONGODB_URI ? process.env.MONGODB_URI.substring(0, 10) : 'none'
+    });
+});
+
 app.listen(PORT, () => {
     console.log('🚀 Server running on http://localhost:' + PORT);
 });
