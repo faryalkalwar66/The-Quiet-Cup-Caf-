@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 // MongoDB Connection (Local or Cloud)
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/quietcup';
+const MONGODB_URI = 'mongodb://faryalkalwar66_db_user:2dgNsQli7wfZcIfI@ac-deu2ok4-shard-00-00.fv6bjby.mongodb.net:27017,ac-deu2ok4-shard-00-01.fv6bjby.mongodb.net:27017,ac-deu2ok4-shard-00-02.fv6bjby.mongodb.net:27017/quietcup?ssl=true&replicaSet=atlas-626cly-shard-0&authSource=admin&retryWrites=true&w=majority';
 mongoose.connect(MONGODB_URI)
 .then(() => console.log('✅ Connected to MongoDB (' + (process.env.MONGODB_URI ? 'Cloud Atlas' : 'Local') + ')'))
 .catch(err => console.error('❌ MongoDB Connection Error:', err));
