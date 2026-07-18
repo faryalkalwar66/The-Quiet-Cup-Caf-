@@ -102,7 +102,7 @@ app.post('/api/orders', async (req, res) => {
         await newOrder.save();
         res.status(201).json({ message: 'Order placed successfully!', order: newOrder });
     } catch (error) {
-        res.status(500).json({ error: 'Failed to place order' });
+        res.status(500).json({ error: 'Failed to place order: ' + error.message });
     }
 });
 

@@ -283,7 +283,7 @@ function showToast(message) {
         };
 
         try {
-            const API_URL = 'http://localhost:3000/api';
+            const API_URL = '/api';
             const res = await fetch(`${API_URL}/reviews`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
