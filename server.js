@@ -114,6 +114,10 @@ app.get('/api/debug', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log('🚀 Server running on http://localhost:' + PORT);
-});
+if (!process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log('🚀 Server running on http://localhost:' + PORT);
+    });
+}
+
+module.exports = app;
