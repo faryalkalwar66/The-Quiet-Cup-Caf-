@@ -13,11 +13,26 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
 
-// MongoDB Connection (Local or Cloud)
+// MongoDB Connection (Serverless-friendly)
 const MONGODB_URI = process.env.MONGODB_URI;
-mongoose.connect(MONGODB_URI)
-.then(() => console.log('✅ Connected to MongoDB (' + (process.env.MONGODB_URI ? 'Cloud Atlas' : 'Local') + ')'))
-.catch(err => console.error('❌ MongoDB Connection Error:', err));
+
+// Middleware to ensure DB is connected before handling any request
+app.use(async (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+        if (mongoose.connection.readyState !== 1) { // 1 = connected
+            try {
+                await mongoose.connect(MONGODB_URI, {
+                    serverSelectionTimeoutMS: 5000 // Timeout quickly if IP is blocked
+                });
+                console.log('✅ Connected to MongoDB');
+            } catch (err) {
+                console.error('❌ MongoDB Connection Error:', err);
+                return res.status(500).json({ error: 'Database connection failed: ' + err.message });
+            }
+        }
+    }
+    next();
+});
 
 // --- Schemas & Models ---
 const Reservation = mongoose.model('Reservation', new mongoose.Schema({
